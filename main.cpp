@@ -6,6 +6,7 @@
 
 #include "ErrorContext.h"
 #include "PointTests.h"
+#include "Point.h"
 
 using std::cout;
 using std::endl;
@@ -16,6 +17,15 @@ int main() {
 
     const int NumIters = 3;
 
+    cout << "Welcome to the 3D Triangle distance and area calculator" << endl << endl;
+
+
+    Point a, b, c;
+
+    double distanceTo(a, b, c);
+
+
+/*
     cout << endl << "Testing PA1!!" << endl << endl;
 
     cout << "NOTE:  If you see any memory errors, you MUST fix them!" << endl;
@@ -25,7 +35,7 @@ int main() {
     << endl;
     cout << "       probably a bug in your destructor." << endl;
 
-    cout << endl;
+    cout << endl; */
 
     ErrorContext ec(cout);
 
