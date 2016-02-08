@@ -4,9 +4,10 @@
 #include <sstream>
 #include <vector>
 
+#include "Point.h"
 #include "ErrorContext.h"
 #include "PointTests.h"
-#include "Point.h"
+
 
 using std::cout;
 using std::endl;
@@ -19,10 +20,13 @@ int main() {
 
     cout << "Welcome to the 3D Triangle distance and area calculator" << endl << endl;
 
-
     Point a, b, c;
+    //double distance;
 
-    double distanceTo(a, b, c);
+   // distance  = a.distanceTo(a, b, c); // This is not reading from the header file
+
+    computeArea(a, b, c);
+
 
 
 /*

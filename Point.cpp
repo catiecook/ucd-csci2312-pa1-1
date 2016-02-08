@@ -28,7 +28,8 @@ Point::Point(double newX, double newY, double newZ) // : x(newX), y(newY, z(newZ
 
 }
 
-void Point::setY(double newY) {
+void Point::setY(double newY)
+{
 
     y = newY;
 
@@ -42,14 +43,15 @@ void Point::setX(double newX)
 
 }
 
-void Point::setZ(double newZ) {
+void Point::setZ(double newZ)  //store Z
+{
 
     z = newZ;
 
 
 }
 
-double Point::getX(double x)
+double Point::getX() const //get X and set it
 {
 
 
@@ -61,7 +63,7 @@ double Point::getX(double x)
 
 }
 
-double Point::getY(double y)
+double Point::getY() const //get Y and set it
 {
 
     cout << "Enter the y value for point B" << endl;
@@ -72,7 +74,8 @@ double Point::getY(double y)
 
 }
 
-double Point::getZ(double z) {
+double Point::getZ() const  //get Z and set it
+{
 
     cout << "Enter the z value for point C" << endl;
     cin >> z;
@@ -82,34 +85,34 @@ double Point::getZ(double z) {
 
 }
 
-double Point::distanceTo(Point& a, Point& b, Point& c)
+double Point::distanceTo(const Point& a, const Point& b, const Point& c) // will calculate the distance between the points
 {
 
-    a.getX(x);
-    a.getY(y);
-    a.getZ(z);
+    a.getX(); //Getting all three coordinates for the points
+    a.getY();
+    a.getZ();
 
-    b.getX(x);
-    b.getY(y);
-    b.getZ(z);
+    b.getX();
+    b.getY();
+    b.getZ();
 
-    c.getX(x);
-    c.getY(y);
-    c.getZ(z);
+    c.getX();
+    c.getY();
+    c.getZ();
 
-    double aTob, bToc, cToa;
+    double aTob, bToc, cToa; //setting variables for the length of the sides
 
     aTob = sqrt(pow((a.x - b.x), 2) + pow((a.y - b.y), 2) + pow((a.z - b.z), 2));
     bToc = sqrt(pow((b.x - c.x), 2) + pow((b.y - c.y), 2) + pow((b.z - c.z), 2));
     cToa = sqrt(pow((c.x - a.x), 2) + pow((c.y - a.y), 2) + pow((c.z - a.z), 2));
 
 
-    cout << "Now we will calculate the distance between the points, and gather the perimeter distance." << endl << endl;
-    cout << "The distance between points is: " << distance;
-
     return aTob, bToc, cToa;
 
 }
 
+//I see where my logic is wrong, but I cannot wrap my head around how to fix it. I need to separate this function
+//so that it returns a b and c side lengths from the separate 3D points and then continue with Huron's formula.
 
-}
+//
+

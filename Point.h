@@ -22,12 +22,12 @@ public:
     void setZ(double newZ);
 
     // Accessor methods
-    double getX(double x);
-    double getY(double y);
-    double getZ(double z);
+    double getX() const;
+    double getY() const;
+    double getZ() const;
 
 
-    double distanceTo(Point& a, Point& b, Point& c);
+    double distanceTo(const Point& a, const Point& b, const Point& c);
 
 };
 
