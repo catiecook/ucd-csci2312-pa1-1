@@ -17,15 +17,13 @@ double computeArea(const Point &a, const Point &b, const Point &c);
 
 double computeArea(const Point &a, const Point &b, const Point &c)
 {
-    double distance;
 
     double area, s;
 
-   distance = a.distanceTo(a, c, b);
+   s = (a.distanceTo(b) + b.distanceTo(c) + c.distanceTo(a))/2;
 
-    s = (distanceAB + distanceBC + distanceCA)/2;
 
-    area = sqrt(s*(s-distanceAB)*(s- distanceBC)*(s-distanceCA));
+    area = sqrt(s*(s-a.distanceTo(b))*(s- b.distanceTo(c))*(s-c.distanceTo(a)));
 
 
     return area;

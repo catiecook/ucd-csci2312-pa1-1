@@ -85,7 +85,7 @@ double Point::getZ() const  //get Z and set it
 
 }
 
-double Point::distanceTo(const Point& a, const Point& b, const Point& c) // will calculate the distance between the points
+double Point::distanceTo(const Point&) const // will calculate the distance between the points
 {
 /*
     a.getX(); //Getting all three coordinates for the points

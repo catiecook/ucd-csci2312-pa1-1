@@ -27,7 +27,7 @@ public:
     double getZ() const;
 
 
-    double distanceTo(const Point& a, const Point& b, const Point& c);
+    double distanceTo(const Point&) const;
 
 };
 
