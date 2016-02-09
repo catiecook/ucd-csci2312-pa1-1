@@ -18,28 +18,16 @@ int main() {
 
     const int NumIters = 3;
 
-    cout << "Welcome to the 3D Triangle distance and area calculator" << endl << endl;
+     cout << endl << "Testing PA1!!" << endl << endl;
 
-    Point a, b, c;
-    //double distance;
+     cout << "NOTE:  If you see any memory errors, you MUST fix them!" << endl;
+     cout << "       Tests intentionally invoke destructors after they complete,"
+     << endl;
+     cout << "       so if you see a seg-fault after a passed test, it is"
+     << endl;
+     cout << "       probably a bug in your destructor." << endl;
 
-   // distance  = a.distanceTo(a, b, c); // This is not reading from the header file
-
-    computeArea(a, b, c);
-
-
-
-/*
-    cout << endl << "Testing PA1!!" << endl << endl;
-
-    cout << "NOTE:  If you see any memory errors, you MUST fix them!" << endl;
-    cout << "       Tests intentionally invoke destructors after they complete,"
-    << endl;
-    cout << "       so if you see a seg-fault after a passed test, it is"
-    << endl;
-    cout << "       probably a bug in your destructor." << endl;
-
-    cout << endl; */
+     cout << endl;
 
     ErrorContext ec(cout);
 
@@ -54,3 +42,37 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+/*
+     double distanceAB, distanceBC, distanceCA;
+     cout << "Welcome to the 3D Triangle distance and area calculator" << endl << endl;
+
+     Point a, b, c;
+     //double distance;
+
+     a.getX();
+     a.getY();
+     a.getZ();
+
+     b.getX();
+     b.getY();
+     c.getZ();
+
+     distanceAB = a.distanceTo(a, b); // get distance from a to b
+     distanceBC = b.distanceTo(b, c); //distance from b to c
+
+     c.getX();
+     c.getY();
+     c.getZ();
+
+     distanceCA = c.distanceTo(c, a); // get distance from c to a
+
+
+
+     computeArea(a, b, c);
+
+ */

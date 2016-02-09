@@ -9,7 +9,7 @@
 using namespace std;
 
 
-//******* FUNCTION DEFINITION ***********
+//******* FUNCTION DECLARATION ***********
 double computeArea(const Point &a, const Point &b, const Point &c);
 
 
@@ -17,12 +17,15 @@ double computeArea(const Point &a, const Point &b, const Point &c);
 
 double computeArea(const Point &a, const Point &b, const Point &c)
 {
+    double distance;
 
     double area, s;
 
-    s = (aTob + bToa + cToa)/2;
+   distance = a.distanceTo(a, c, b);
 
-    area = sqrt(s*(s-aTob)*(s-bToa)*(s-cToa));
+    s = (distanceAB + distanceBC + distanceCA)/2;
+
+    area = sqrt(s*(s-distanceAB)*(s- distanceBC)*(s-distanceCA));
 
 
     return area;
